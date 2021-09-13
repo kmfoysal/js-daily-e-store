@@ -15,7 +15,7 @@ const showProducts = (products) => {
       <div>
     <img class="product-image" src=${image}></img>
       </div>
-      <h3>${product.title}</h3>
+      <h3>${product.title.slice(0, 20)}</h3>
       <p>Category: ${product.category}</p>
       <h4>Rating: ${product.rating.rate}</h4>
       <h5>${product.rating.count} People Rated</h5>
@@ -26,6 +26,8 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+// Update Total Added Products 
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
